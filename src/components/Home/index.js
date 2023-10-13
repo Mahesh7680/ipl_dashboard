@@ -1,5 +1,8 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import TeamCard from '../TeamCard/index'
+
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 import './index.css'
 
@@ -17,7 +20,7 @@ import './index.css'
 // ]
 
 class Home extends Component {
-  state = {teamData: []}
+  state = {teamData: [], isLoading: true}
 
   componentDidMount() {
     this.getApiData()
@@ -33,20 +36,30 @@ class Home extends Component {
       name: each.name,
       teamImageUrl: each.team_image_url,
     }))
-    this.setState({teamData: updatedData})
+    this.setState({teamData: updatedData, isLoading: false})
   }
 
   render() {
-    const {teamData} = this.state
+    const {teamData, isLoading} = this.state
     return (
       <div className="main-container">
+        <img
+          alt="ipl logo"
+          src="https://assets.ccbp.in/frontend/react-js/ipl-logo-img.png "
+        />
         <h1>IPL Dashboard</h1>
         <br />
-        <div className="cards-container">
-          {teamData.map(each => (
-            <TeamCard key={each.id} eachItem={each} />
-          ))}
-        </div>
+        {isLoading ? (
+          <div data-testid="loader">
+            <Loader type="TailSpin" width={50} height={50} />
+          </div>
+        ) : (
+          <ul className="cards-container">
+            {teamData.map(each => (
+              <TeamCard key={each.id} eachItem={each} />
+            ))}
+          </ul>
+        )}
       </div>
     )
   }

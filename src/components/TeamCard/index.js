@@ -1,4 +1,4 @@
-import {Link} from 'react-dom'
+import {Link} from 'react-router-dom'
 import './index.css'
 
 const TeamCard = props => {
@@ -9,10 +9,10 @@ const TeamCard = props => {
 
   return (
     <Link to={`/team-matches/${id}`}>
-      <div className="team-card-container">
+      <li className="team-card-container">
         <img alt={name} src={teamImageUrl} />
         <p>{name}</p>
-      </div>
+      </li>
     </Link>
   )
 }

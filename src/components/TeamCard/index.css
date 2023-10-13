@@ -13,3 +13,7 @@
 .team-card-container img {
   height: 50px;
 }
+Link {
+  text-decoration: none;
+  color: #ffffff;
+}

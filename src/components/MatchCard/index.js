@@ -16,13 +16,15 @@ const MatchCard = props => {
     venue,
   } = eachItem
 
+  console.log(result, matchStatus)
+
   return (
-    <div className="match-card-item">
-      <img src={competingTeamLogo} />
+    <li className="match-card-item">
+      <img alt={`competing team ${competingTeam}`} src={competingTeamLogo} />
       <h5>{competingTeam}</h5>
       <p>{result}</p>
-      <p>Lost</p>
-    </div>
+      <p>{matchStatus}</p>
+    </li>
   )
 }
 
