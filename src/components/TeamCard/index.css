@@ -1,0 +1,15 @@
+.team-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  /* max-width: 200px; */
+  gap: 1em;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff33;
+  padding-left: 3px;
+}
+.team-card-container img {
+  height: 50px;
+}

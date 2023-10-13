@@ -1,0 +1,16 @@
+.match-card-item {
+  background-color: #0f172a;
+  font-size: 12px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  color: #ffffff;
+}
+.match-card-item img {
+  height: 50px;
+}

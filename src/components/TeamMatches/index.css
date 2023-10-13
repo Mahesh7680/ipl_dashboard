@@ -1,0 +1,18 @@
+.latest-matches-bg-container {
+  background-image: linear-gradient(to bottom, #d91c1f, #1e293b);
+  color: red;
+  min-height: 100vh;
+  width: 100dvw;
+  padding-top: 10px;
+  padding: 10px;
+}
+.latest-matches-top-image {
+  width: 97vw;
+  margin-bottom: 20px;
+}
+.recent-matches-container {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}

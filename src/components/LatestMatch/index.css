@@ -1,0 +1,14 @@
+.latest-matches-container {
+  color: #ffffff;
+  background-color: #0f172a;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.match-details {
+  display: flex;
+  align-items: center;
+}
+.match-details img {
+  height: 80px;
+}
